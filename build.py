@@ -6,7 +6,7 @@ if __name__ == "__main__":
     builder.add_common_builds()
     filtered_builds = []
     for settings, options in builder.builds:
-        if settings["compiler.version"] == "4.8" or settings["compiler.version"] == "5.2":
+        if settings["arch"] == "x86_64" :
              filtered_builds.append([settings, options])
     builder.builds = filtered_builds
     builder.run()
