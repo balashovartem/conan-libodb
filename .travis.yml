@@ -8,7 +8,7 @@ env:
     - CONAN_GCC_VERSIONS=4.8 CONAN_USE_DOCKER=1
   global:
     - CONAN_UPLOAD=0
-    - CONAN_REFERENCE="libodb/1.10.0"
+    - CONAN_REFERENCE="libodb/2.4.0"
     - CONAN_USERNAME="balashovartem"
     - CONAN_CHANNEL="testing"
     - CONAN_TOTAL_PAGES=1
