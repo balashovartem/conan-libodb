@@ -7,8 +7,8 @@ username = os.getenv("CONAN_USERNAME", "balashovartem")
 class LibOdbConan(ConanFile):
     name = "libodb"
     version = "2.4.0"
-    license = "<Put the package license here>"
-    url = "<Package recipe repository url here, for issues about the package"
+    license = "MIT"
+    url = "https://github.com/balashovartem/conan-libodb"
     settings = "os", "compiler", "build_type", "arch"
     generators = "cmake"
     source_tgz = "http://www.codesynthesis.com/download/odb/2.4/libodb-2.4.0.tar.gz"
@@ -26,4 +26,6 @@ class LibOdbConan(ConanFile):
 
     def package(self):
         self.copy("*", dst="./", src="install", keep_path=True)
-
+	
+    def package_info(self):
+        self.cpp_info.libs = ['odb'] 
